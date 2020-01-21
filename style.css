@@ -24,7 +24,7 @@ body {
 }
 .title-wrapper{
   /* in order for child to have an absolute position it's parent should have a relative one */
-width: 100%
+width: 100%;
   padding: 0;
   margin: 0;
   position: absolute;
