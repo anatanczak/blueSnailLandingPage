@@ -10,13 +10,14 @@ document.addEventListener('scroll', () => {
     if (pixelsScrolled > 10) {
       console.log("we are scrolling downwards");
       //console.log(fromBottom)
-      console.log(pixelsScrolled)
+     // console.log(pixelsScrolled)
     //   upArrow.style.display = 'block';
     } else {
         //bgpic.style.display = none
     //   upArrow.style.display = 'none';
     //print("we are scrolling downwards")
     }
+    //kdhflkshhslfhslfhslkhflshlfhs
 
 
 
