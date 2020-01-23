@@ -1,38 +1,57 @@
 html {
   box-sizing: border-box;
 }
+
 *, *::before, *::after {
   box-sizing: inherit;
 }
+
 body {
   background-color: #9e853f;
-  margin: 0px;
+  margin: 0;
 }
 
+/*this class is for the element animated-arrow it makes it appear at the bottom*/
+.visible-arrow {
+  display:block;
+  position: fixed;
+  bottom: 4%;
+  margin-left: 46%;
+  margin-right: auto;
+  width: 8%;
+  z-index: 1;
+}
 
-.image-wrapper{
+.hidden-arrow {
+  display: none;
+}
+
+.image-wrapper {
   background-color: red;
   /* this line of code assures that the children can have absolute position */
   position: relative;
   text-align: center;
 }
+
 .background-image {
   /* putting display blok on the image solves the problem of seeing a part of the div it is inside */
   display: block;
   width: 100%;
   height: auto;
 }
-.title-wrapper{
+
+.title-wrapper {
   /* in order for child to have an absolute position it's parent should have a relative one */
-width: 100%;
+  width: 100%;
   padding: 0;
   margin: 0;
   position: absolute;
   bottom: 5%;
-left: 50%;
-transform: translate(-50%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.title{
+
+.title {
   padding: 0;
   margin: 0;
   color: #f3afcb;
