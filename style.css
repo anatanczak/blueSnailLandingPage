@@ -7,69 +7,61 @@ html {
 }
 
 body {
-  background-color: #9e853f;
+  /* background-color: #9e853f; */
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
 
 /*this class is for the element animated-arrow it makes it appear at the bottom*/
 .visible-arrow {
-  display:block;
-  position: fixed;
-  bottom: 4%;
   margin-left: 46%;
   margin-right: auto;
+  margin-bottom: 3em;
   width: 8%;
+  height: auto;
   z-index: 1;
 }
 
+/* Question: Why display hidden has very strange behavoir here??? */
 .hidden-arrow {
-  display: none;
+  visibility: hidden;
 }
 
-.image-wrapper {
-  background-color: red;
-  /* this line of code assures that the children can have absolute position */
-  position: relative;
+.box-container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh
 }
 
-.background-image {
+.box-container-upper {
+
+}
+.box-container-lower {
+  background-image: url("images/background_mobile_2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.lower-flex-item{
+  display: flex;
+  flex-direction: column;
+}
+.form-item{
+}
+.first-image {
   /* putting display blok on the image solves the problem of seeing a part of the div it is inside */
   display: block;
   width: 100%;
   height: auto;
 }
 
-.title-wrapper {
-  /* in order for child to have an absolute position it's parent should have a relative one */
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .title {
-  padding: 0;
-  margin: 0;
   color: #f3afcb;
   white-space: nowrap;
-  /* font-size: 1em; */
 }
-.text-and-form-wrapper {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-}
+
 p {
-margin-left: 10%;
-margin-right: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
