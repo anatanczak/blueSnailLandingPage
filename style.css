@@ -49,9 +49,28 @@ body {
   width: 100%;
   height: auto;
 }
+.flex-item-paragraph{
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
 
 /* for ipad */
 @media only screen and (max-width: 768px) {
+/* animated arrow that appear on tablet/mobile */
+  .visible-arrow {
+    display:block;
+    position: fixed;
+    bottom: 4%;
+    margin-left: 90%;
+    margin-right: auto;
+    width: 8%;
+    z-index: 1;
+  }
+
+  .hidden-arrow {
+    display: none;
+  }
   .main-content {
 flex-direction: column-reverse;
 height: 100%;
@@ -59,7 +78,6 @@ height: 100%;
 
   .image-container {
   /* when it's a flex-container */
-
     flex: 1;
     visibility: visible;
   }
