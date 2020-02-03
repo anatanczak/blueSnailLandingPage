@@ -15,25 +15,54 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+/* animated arrow that is not visible on dektop */
+.visible-arrow, .hidden-arrow {
+  display: none;
+}
 .main-content {
   background-color: burlywood;
-
+  height: 100vh;
   display: flex;
 }
-
 .paragraph-and-form-container {
   background-color: aquamarine;
   /* when it's a flex-container */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 100vh;
-
+  /* height: 100vh; */
   /* when it's flex-item */
   flex: 1;
 }
 
-.image-and-arrow-container {
+/* the picture with the girl and arrow are invisible on desctop and */
+.image-container {
+/* when it's a flex-container */
+  display: flex;
+  flex-direction: column;
+
   flex: 1;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
+
+.first-image {
+  width: 100%;
+  height: auto;
+}
+
+/* for ipad */
+@media only screen and (max-width: 768px) {
+  .main-content {
+flex-direction: column-reverse;
+height: 100%;
+  }
+
+  .image-container {
+  /* when it's a flex-container */
+
+    flex: 1;
+    visibility: visible;
+  }
+
+}
+/* TO DO: handle landscape for mobiles */
