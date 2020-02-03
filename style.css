@@ -2,66 +2,38 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 body {
   /* background-color: #9e853f; */
   margin: 0;
+  padding: 0;
   font-family: 'Lato', sans-serif;
 }
 
-/*this class is for the element animated-arrow it makes it appear at the bottom*/
-.visible-arrow {
-  margin-left: 46%;
-  margin-right: auto;
-  margin-bottom: 3em;
-  width: 8%;
-  height: auto;
-  z-index: 1;
+.main-content {
+  background-color: burlywood;
+
+  display: flex;
 }
 
-/* Question: Why display hidden has very strange behavoir here??? */
-.hidden-arrow {
-  visibility: hidden;
-}
-
-.box-container {
-  text-align: center;
+.paragraph-and-form-container {
+  background-color: aquamarine;
+  /* when it's a flex-container */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100vh
+  justify-content: flex-end;
+  height: 100vh;
+
+  /* when it's flex-item */
+  flex: 1;
 }
 
-.box-container-upper {
-
-}
-.box-container-lower {
-  background-image: url("images/background_mobile_2.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-.lower-flex-item{
-  display: flex;
-  flex-direction: column;
-}
-.form-item{
-}
-.first-image {
-  /* putting display blok on the image solves the problem of seeing a part of the div it is inside */
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.title {
-  color: #f3afcb;
-  white-space: nowrap;
-}
-
-p {
-  margin-left: 10%;
-  margin-right: 10%;
+.image-and-arrow-container {
+  flex: 1;
+  /* visibility: hidden; */
 }
