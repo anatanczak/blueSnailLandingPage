@@ -12,47 +12,53 @@
 
 
 <body>
-  <!-- the arrow that appears on mobile and disappears when scrolled -->
-  <img id="animated-arrow" class="visible-arrow" src="images/animated_arrow_for_mobile.png"
-    alt="animated arrow to scroll down" title="animated arrow">
-
-  <div class="main-content">
-    <div class="paragraph-and-form-container">
-      <h1 id="coming-soon-h1" class="title">COMING SOON</h1>
-
-      <p class="flex-item-paragraph">Take your child to the magic world of fairytales, games & learning.</p>
-      <p class="flex-item-paragraph">Blue Snail is an interactive digital library.Your child can learn through
-        reading,
-        playing and also share this
-        experience with you.</p>
-      <p class="flex-item-paragraph">Subscribe to be the first one to know when it comes out</p>
-
-      <form class="contact-form" action="" method="post">
-        <div class="form-item">
-          <label class="form-label" for="name-input">Name</label>
-          <input type="text" name="name" value="" id="name-input" required>
-        </div>
-        <div class="form-item">
-          <label class="form-label" for="email-input">Email</label>
-          <input type="email" name="email" value="" id="email-input" required>
-        </div>
-        <div>
-          <input type="checkbox" name="checkbox" value="" id="checkbox-input" required>
-          <label for="checkbox-input">I have read <a href="https://anavidev.com/privacy-policy-2/">Privacy
-              Policy</a>
-            and
-            consent to <a href="https://anavidev.com/terms-and-conditions/">Terms and Conditions</a></label>
-        </div>
-        <input type="submit">
-      </form>
-    </div>
-    <div class="image-container">
-      <img class="first-image" src="images/background_mobile_1.jpg"
-        alt="decorative image with a girl reading a book and imagining something" title="a girl reading a book">
 
 
+  <div class="div-wrapper-for-bgimage-and-maincontent">
+
+    <img class="bg-img-desktop" src="images/background-desktop.jpg" alt="decorative image of a girl reading a book and imagining something">
+    <div class="main-content">
+      <div class="paragraph-and-form-container">
+        <h1 id="coming-soon-h1" class="title">COMING SOON</h1>
+
+        <p class="flex-item-paragraph">Take your child to the magic world of fairytales, games & learning.</p>
+        <p class="flex-item-paragraph">Blue Snail is an interactive digital library.Your child can learn through
+          reading,
+          playing and also share this
+          experience with you.</p>
+        <p class="flex-item-paragraph">Subscribe to be the first one to know when it comes out</p>
+
+        <form class="contact-form" action="" method="post">
+          <div class="form-item">
+            <label class="form-label" for="name-input">Name</label>
+            <input type="text" name="name" value="" id="name-input" required>
+          </div>
+          <div class="form-item">
+            <label class="form-label" for="email-input">Email</label>
+            <input type="email" name="email" value="" id="email-input" required>
+          </div>
+          <div>
+            <input type="checkbox" name="checkbox" value="" id="checkbox-input" required>
+            <label for="checkbox-input">I have read <a href="https://anavidev.com/privacy-policy-2/">Privacy
+                Policy</a>
+              and
+              consent to <a href="https://anavidev.com/terms-and-conditions/">Terms and Conditions</a></label>
+          </div>
+          <input type="submit">
+        </form>
+      </div>
+      <div class="image-container">
+
+        
+        <img class="first-image" src="images/background_mobile_1.jpg" alt="decorative image with a girl reading a book and imagining something" title="a girl reading a book">
+        <!-- the arrow that appears on mobile and disappears when scrolled -->
+        <img id="animated-arrow" class="visible-arrow" src="images/animated_arrow_for_mobile.png" alt="animated arrow to scroll down" title="animated arrow">
+
+
+      </div>
     </div>
   </div>
+
   <script src="js/script.js"></script>
 </body>
 

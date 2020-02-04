@@ -19,13 +19,22 @@ body {
 .visible-arrow, .hidden-arrow {
   display: none;
 }
+.div-wrapper-for-bgimage-and-maincontent{
+  position: relative;
+}
 .main-content {
-  background-color: burlywood;
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   display: flex;
 }
+.bg-img-desktop{
+  width: 100%;
+}
+
 .paragraph-and-form-container {
-  background-color: aquamarine;
   /* when it's a flex-container */
   display: flex;
   flex-direction: column;
@@ -37,10 +46,9 @@ body {
 
 /* the picture with the girl and arrow are invisible on desctop and */
 .image-container {
-/* when it's a flex-container */
+  /* when it's a flex-container */
   display: flex;
   flex-direction: column;
-
   flex: 1;
   visibility: hidden;
 }
@@ -49,38 +57,99 @@ body {
   width: 100%;
   height: auto;
 }
-.flex-item-paragraph{
+
+.flex-item-paragraph {
   margin-left: 10%;
   margin-right: 10%;
   text-align: center;
 }
 
 /* for ipad */
-@media only screen and (max-width: 768px) {
-/* animated arrow that appear on tablet/mobile */
+@media only screen and (max-width: 940px) {
+/* arrow animation */
+  /* Firefox old*/
+  @-moz-keyframes blink {
+      0% {
+          opacity:1;
+      }
+      50% {
+          opacity:0;
+      }
+      100% {
+          opacity:1;
+      }
+  }
+
+  @-webkit-keyframes blink {
+      0% {
+          opacity:1;
+      }
+      50% {
+          opacity:0;
+      }
+      100% {
+          opacity:1;
+      }
+  }
+  /* IE */
+  @-ms-keyframes blink {
+      0% {
+          opacity:1;
+      }
+      50% {
+          opacity:0;
+      }
+      100% {
+          opacity:1;
+      }
+  }
+  /* Opera and prob css3 final iteration */
+  @keyframes blink {
+      0% {
+          opacity:1;
+      }
+      50% {
+          opacity:0;
+      }
+      100% {
+          opacity:1;
+      }
+  }
+  /* animated arrow that appear on tablet/mobile */
   .visible-arrow {
-    display:block;
-    position: fixed;
-    bottom: 4%;
-    margin-left: 90%;
-    margin-right: auto;
+    display: block;
     width: 8%;
-    z-index: 1;
+    margin-left: 46%;
+    -moz-animation: blink normal 2s infinite ease-in-out;
+    /* Firefox */
+    -webkit-animation: blink normal 2s infinite ease-in-out;
+    /* Webkit */
+    -ms-animation: blink normal 2s infinite ease-in-out;
+    /* IE */
+    animation: blink normal 2s infinite ease-in-out;
+    /* Opera and prob css3 final iteration */
   }
 
   .hidden-arrow {
     display: none;
   }
+  .div-wrapper-for-bgimage-and-maincontent{
+    position: static;
+  }
+  .bg-img-desktop{
+    display: none;
+  }
   .main-content {
-flex-direction: column-reverse;
-height: 100%;
+    position: static;
+    flex-direction: column-reverse;
+    height: 100%;
   }
 
   .image-container {
-  /* when it's a flex-container */
+    /* when it's a flex-container */
     flex: 1;
     visibility: visible;
   }
-
 }
+
 /* TO DO: handle landscape for mobiles */
