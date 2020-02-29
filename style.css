@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
+  font-size: 100%;
 }
 
 .main-content {
@@ -24,72 +25,100 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: center;
   /* when it's flex-item */
   flex: 1;
-  margin-top: 30vh;
-  margin-bottom: 30px;
-    /* border: 3px solid red; */
 }
 
 .flex-item-h1 {
   color: #82296b;
-
 }
 
 .flex-item-paragraph {
-  /* border: 3px solid green; */
-  /* max-width: 70%; */
   margin: 1% 5%;
   text-align: center;
+}
 
+.blue-text {
+  color: #494d8c
 }
 
 .contact-form {
-    /* border: 3px solid blue; */
+  /* border: 3px solid blue; */
   align-self: center;
   display: flex;
   flex-direction: column;
 }
 
 .form-item {
-  width: 100%;
   align-self: center;
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-bottom: 20px;
 }
 
 .input-box {
   border-radius: 6px;
   border: 1px solid black;
-  min-height: 30px;
-}
-
-.checkbox-input{
-  font-size: 8px;
 }
 
 .submit-button {
+  align-self: center;
   background-color: #82296b;
   color: white;
   min-height: 30px;
-  border-radius: 6px;
-    margin-top: 20px;
-    border: none;
-    font-size: 16px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: none;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
 }
 
-@media only screen and (min-width: 1300px) {
-.flex-item-paragraph {
-  margin-left: 20%;
-  margin-right: 20%;
-}
-}
+/* --------------------------MIN WIDTH FROM SMALLEST TO LARGEST------------------------ */
+/* ------------------------------------SMALL DESKTOPs------------------------------------------------------- */
+@media only screen and (min-width: 1020px) {
+  h1 {
+    font-size: 2rem;
+    margin-top: 2em;
+    margin-bottom: 0.2em;
+  }
 
+  p {
+    font-size: 1rem;
+  }
 
-@media only screen and (min-width: 941px) {
+  .paragraph-and-form-container {
+    /* when it's a flex-container */
+    justify-content: center;
+    /* when it's flex-item */
+    flex: 1;
+    margin-top: 30vh;
+    margin-bottom: 30px;
+  }
+
+  .contact-form {
+    margin-top: 6px;
+  }
+
+  .flex-item-paragraph {
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+
+  .form-item {
+    width: 70%;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+
+  .input-box {
+    min-height: 35px;
+  }
+
+  .submit-button {
+    min-height: 35px;
+    font-size: 1em;
+    width: 30%;
+  }
 
   /* the picture with the girl and arrow are invisible on desktop and */
   .image-container {
@@ -100,15 +129,14 @@ body {
     /* visibility: hidden; */
   }
 
-  .first-image, .first-image-tablet {
+  .first-image, .first-image-tablet, .end-decoration {
     display: none;
   }
 
   /* animated arrow that is not visible on dektop */
-  .visible-arrow, .hidden-arrow {
+  /* .visible-arrow, .hidden-arrow {
     display: none;
-  }
-
+  } */
   .div-wrapper-for-bgimage-and-maincontent {
     position: relative;
   }
@@ -126,120 +154,111 @@ body {
   }
 }
 
-/* for Ipad pro and Big tablets */
-@media only screen and (max-width: 1050px) and (orientation: portrait) {
-  .first-image {
-    display: none;
+/* ------------------------------------MEDIUM DESKTOPs------------------------------------------------------- */
+@media only screen and (min-width: 1400px) {
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
   }
 
-  .first-image-tablet {
-    display: block;
-    width: 100%;
-    height: auto;
+  p {
+    font-size: 1.2rem;
   }
 
-  /* arrow animation */
-  /* Firefox old*/
-  @-moz-keyframes blink {
-    0% {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
+  .contact-form {
+    margin-top: 8px;
   }
 
-  @-webkit-keyframes blink {
-    0% {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
+  .flex-item-paragraph {
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
-  /* IE */
-  @-ms-keyframes blink {
-    0% {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
+  .input-box {
+    min-height: 40px;
   }
 
-  /* Opera and prob css3 final iteration */
-  @keyframes blink {
-    0% {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-
-  /* animated arrow that appear on tablet/mobile */
-  .visible-arrow {
-    display: block;
-    width: 8%;
-    margin-left: 46%;
-    -moz-animation: blink normal 2s infinite ease-in-out;
-    /* Firefox */
-    -webkit-animation: blink normal 2s infinite ease-in-out;
-    /* Webkit */
-    -ms-animation: blink normal 2s infinite ease-in-out;
-    /* IE */
-    animation: blink normal 2s infinite ease-in-out;
-    /* Opera and prob css3 final iteration */
-  }
-
-  .hidden-arrow {
-    display: none;
-  }
-
-  .div-wrapper-for-bgimage-and-maincontent {
-    position: static;
-  }
-
-  .bg-img-desktop {
-    display: none;
-  }
-
-  .main-content {
-    position: static;
-    flex-direction: column-reverse;
-    height: 100%;
-  }
-
-  .image-container {
-    /* when it's a flex-container */
-    flex: 1;
-    visibility: visible;
+  .submit-button {
+    min-height: 40px;
+    font-size: 1.2em;
   }
 }
 
-/* for small tablets */
-@media only screen and (max-width: 940px) {
+/* -------------------------------------XXLARGE DESKTOPs--------------------------------- */
+@media only screen and (min-width: 1650px) {
+  h1 {
+    font-size: 3.5rem;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .contact-form {
+    margin-top: 10px;
+  }
+
+  .flex-item-paragraph {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .form-item {
+    width: 100%;
+  }
+
+  .input-box {
+    min-height: 50px;
+  }
+
+  .submit-button {
+    min-height: 50px;
+    font-size: 1.5em;
+    width: 50%;
+  }
+}
+
+/* ----------------MAX WIDTH FOM LARGEST TO SMALLEST ----------------------*/
+/* for Ipad pro and Big tablets It inherits properties from min width 1020 at the top of the file*/
+@media only screen and (max-width: 1050px) and (orientation: portrait) {
+  h1 {
+    font-size: 3rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  /* the appearing and disappearing arrow */
+  .present-arrow {
+    align-self: center;
+    height: 30px;
+    width: 30px;
+    border: solid #1c87a0;
+    border-width: 0 7px 7px 0;
+    display: inline-block;
+    border-radius: 8px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  .hidden-arrow {
+    transform: rotate(585deg);
+    -webkit-transform: rotate(585deg);
+    transition: transform 0.7s ease;
+    opacity: 0;
+    -webkit-transition: transform 0.7s ease-out, opacity 0.3s ease 0.5s;
+    -moz-transition: transform 0.7s ease-out, opacity 0.3s ease 0.5s;
+    -o-transition: transform 0.7s ease-out, opacity 0.3s ease 0.5s;
+    transition: transform 0.7s ease-out, opacity 0.3s ease 0.5s;
+  }
+
   .first-image {
     display: none;
   }
@@ -248,85 +267,6 @@ body {
     display: block;
     width: 100%;
     height: auto;
-  }
-
-  /* arrow animation */
-  /* Firefox old*/
-  @-moz-keyframes blink {
-    0% {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @-webkit-keyframes blink {
-    0% {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-
-  /* IE */
-  @-ms-keyframes blink {
-    0% {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-
-  /* Opera and prob css3 final iteration */
-  @keyframes blink {
-    0% {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-
-  /* animated arrow that appear on tablet/mobile */
-  .visible-arrow {
-    display: block;
-    width: 8%;
-    margin-left: 46%;
-    -moz-animation: blink normal 2s infinite ease-in-out;
-    /* Firefox */
-    -webkit-animation: blink normal 2s infinite ease-in-out;
-    /* Webkit */
-    -ms-animation: blink normal 2s infinite ease-in-out;
-    /* IE */
-    animation: blink normal 2s infinite ease-in-out;
-    /* Opera and prob css3 final iteration */
-  }
-
-  .hidden-arrow {
-    display: none;
   }
 
   .div-wrapper-for-bgimage-and-maincontent {
@@ -340,13 +280,168 @@ body {
   .main-content {
     position: static;
     flex-direction: column-reverse;
-    height: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+  }
+
+  .paragraph-and-form-container {
+    margin-top: 0;
   }
 
   .image-container {
-    /* when it's a flex-container */
-    flex: 1;
-    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .contact-form {
+    margin-top: 20px;
+    align-items: center;
+    align-content: stretch;
+    width: 60vw;
+  }
+
+  .form-item {
+    margin-bottom: 15px;
+  }
+
+  .input-box {
+    height: 35px;
+  }
+
+  .submit-button {
+    font-size: 1.35rem;
+    height: 35px;
+  }
+
+  .end-decoration {
+    display: block;
+    max-width: 100vw;
+    order: -1;
+  }
+}
+
+/* --------------------------for small tablets -----------------------------*/
+@media only screen and (max-width: 1020px) {
+
+  /* the appearing and disappearing arrow */
+  .present-arrow {
+    align-self: center;
+    height: 30px;
+    width: 30px;
+    border: solid #1c87a0;
+    border-width: 0 7px 7px 0;
+    display: inline-block;
+    border-radius: 8px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  .hidden-arrow {
+    transform: rotate(585deg);
+    -webkit-transform: rotate(585deg);
+    transition: transform 0.7s ease;
+    opacity: 0;
+    -webkit-transition: transform 0.7s ease-out, opacity 0.3s ease 0.5s;
+    -moz-transition: transform 0.7s ease-out, opacity 0.3s ease 0.5s;
+    -o-transition: transform 0.7s ease-out, opacity 0.3s ease 0.5s;
+    transition: transform 0.7s ease-out, opacity 0.3s ease 0.5s;
+  }
+
+  .first-image {
+    display: none;
+  }
+
+  .first-image-tablet {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .div-wrapper-for-bgimage-and-maincontent {
+    position: static;
+  }
+
+  .bg-img-desktop {
+    display: none;
+  }
+
+  .main-content {
+    position: static;
+    flex-direction: column-reverse;
+    align-items: center;
+    align-content: center;
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .contact-form {
+    align-items: center;
+    align-content: stretch;
+    width: 100vw;
+  }
+
+  .form-item {
+    margin-bottom: 15px;
+  }
+
+  .input-box {
+    height: 35px;
+    width: 50vw;
+  }
+
+  .submit-button {
+    height: 35px;
+  }
+
+  .end-decoration {
+    max-width: 100vw;
+    order: -1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1{
+    font-size: 2rem;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+  }
+
+  p{
+    font-size: 1.4rem;
+  }
+  .present-arrow {
+    height: 20px;
+    width: 20px;
+    border-width: 0 4px 4px 0;
+    border-radius: 4px 0;
+  }
+
+  .contact-form {
+    align-items: center;
+    align-content: stretch;
+    width: 80vw;
+  }
+
+  .form-item {
+    margin-bottom: 15px;
+  }
+
+  .input-box {
+    width: 75vw;
+    height: 35px;
+  }
+
+  .submit-button {
+    height: 35px;
   }
 }
 
@@ -361,6 +456,10 @@ body {
     width: 100%;
     height: auto;
   }
+
+
+
+
 }
 
 /* TO DO: handle landscape for mobiles */
