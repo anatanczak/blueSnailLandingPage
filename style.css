@@ -62,6 +62,7 @@ body {
 }
 
 .submit-button {
+      -webkit-appearance: none;
   align-self: center;
   background-color: #82296b;
   color: white;
@@ -72,6 +73,11 @@ body {
   font-size: 16px;
   font-family: 'Lato', sans-serif;
 }
+
+/* TODO: solve the problem with the margin with the checkbox on safary mobile */
+/* .checkbox-input-wrapper{
+  margin-top: 10px;
+} */
 
 /* --------------------------MIN WIDTH FROM SMALLEST TO LARGEST------------------------ */
 /* ------------------------------------SMALL DESKTOPs------------------------------------------------------- */
@@ -115,6 +121,7 @@ body {
   }
 
   .submit-button {
+
     min-height: 35px;
     font-size: 1em;
     width: 30%;
