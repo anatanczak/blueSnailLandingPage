@@ -3,7 +3,7 @@ Blue Snail Landing Page est une page de renvoi que j’ai créée pour ma future
 
 Cette page est totalement responsive. Je l'ai codée sans intégrer ni framework ni bibliothèque externe, car j’ai voulu relever un défi : utiliser CSS pur et rendre la page responsive grâce au flexbox.   
   
-**Leins :**  
+**Liens :**  
   
 [Voir la page](https://bluesnailapp.com/landingpage/)  
   
